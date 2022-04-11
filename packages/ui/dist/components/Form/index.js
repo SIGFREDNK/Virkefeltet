@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', {
     value: true
 });
-exports.default = Form;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require('react'));
 
@@ -53,3 +53,5 @@ Form.propTypes = {
     action: _propTypes.default.string,
     submit: _propTypes.default.func
 };
+var _default = Form;
+exports.default = _default;

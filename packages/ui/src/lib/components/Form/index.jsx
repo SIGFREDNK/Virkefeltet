@@ -15,7 +15,7 @@ Form.Clock = Clock;
 Form.Input = Input;
 Form.Search = Search;
 
-export default function Form({ action, submit, children, formClass }) {
+function Form({ action, submit, children, formClass }) {
     return (
         <form action={action} onSubmit={submit} className={formClass}>
             {children}
@@ -32,3 +32,5 @@ Form.propTypes = {
     action: PropTypes.string,
     submit: PropTypes.func
 };
+
+export default Form;

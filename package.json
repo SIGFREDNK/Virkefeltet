@@ -9,10 +9,14 @@
     "version": "0.1.0",
     "description": "Virkefeltet PMV's Monorepo",
     "scripts": {
-        "strive": "npm run start -w @virkefeltet/strive-frontend",
+        "strive": "npm run start -w @virkefeltet/strive-frontend & npm run start -w @virkefeltet/strive-backend",
+        "strive:client": "npm run start -w @virkefeltet/strive-frontend",
+        "strive:server": "npm run start -w @virkefeltet/strive-backend",
         "virkefeltet": "",
-        "prometheus": "npm run start -w @virkefeltet/prometheus-frontend",
-        "server": "",
+        "prometheus": "npm run start -w @virkefeltet/prometheus-frontend & npm run start -w @virkefeltet/prometheus-backend",
+        "prometheus:client": "npm run start -w @virkefeltet/prometheus-frontend",
+        "prometheus:server": "npm run start -w @virkefeltet/prometheus-backend",
+        "server": "npm run start -w @virkefeltet/server",
         "controlpanel": "",
         "package": "npm run build -w @virkefeltet/ui",
         "prepare": "husky install"

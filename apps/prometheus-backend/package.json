@@ -1,0 +1,27 @@
+{
+    "name": "@virkefeltet/prometheus-backend",
+    "version": "0.1.0",
+    "description": "Manage and grow your business",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "keywords": [
+        "accounting",
+        "management",
+        "business"
+    ],
+    "author": "Sigfred Frey Nørgaard Knudsen",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "dependencies": {
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "express-mongo-sanitize": "^2.2.0",
+        "mongoose": "^6.2.10"
+    }
+}
