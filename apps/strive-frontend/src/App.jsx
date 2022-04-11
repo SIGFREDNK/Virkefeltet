@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import path from './constans/path';
+import path from './constants/path';
 import { AnimatePresence } from 'framer-motion';
 
 import Schedule from './pages/schedule';

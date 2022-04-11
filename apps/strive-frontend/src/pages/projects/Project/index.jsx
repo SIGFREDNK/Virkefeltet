@@ -1,5 +1,5 @@
 import { FaHammer, FaAngleDown } from 'react-icons/fa';
-import ProgressBar from '../../../components/ProgressBar';
+import ProgressBar from 'components/ProgressBar';
 
 import './styles.css';
 

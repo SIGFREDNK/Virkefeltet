@@ -1,19 +1,11 @@
 import React from 'react';
+import { getCurrentDate } from '@virkefeltet/utils';
 
 import './styles.css';
 
 export default function DateSelector({ listener, value, disablePast }) {
     const initiate = event => {
         event.target.classList.remove('empty');
-    };
-
-    const getCurrentDate = () => {
-        const today = new Date();
-        return [
-            today.getFullYear(),
-            ('0' + (today.getMonth() + 1)).slice(-2),
-            ('0' + today.getDate()).slice(-2)
-        ].join('-');
     };
 
     const minDateValue = disablePast ? getCurrentDate() : null;

@@ -1,4 +1,4 @@
-import FormLayout from '../../../layouts/form';
+import FormLayout from 'layouts/form';
 
 import './styles.css';
 import '../styles.css';

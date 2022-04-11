@@ -7,6 +7,8 @@ exports.default = DateSelector;
 
 var _react = _interopRequireDefault(require('react'));
 
+var _utils = require('@virkefeltet/utils');
+
 require('./styles.css');
 
 function _interopRequireDefault(obj) {
@@ -20,16 +22,7 @@ function DateSelector(_ref) {
         event.target.classList.remove('empty');
     };
 
-    const getCurrentDate = () => {
-        const today = new Date();
-        return [
-            today.getFullYear(),
-            ('0' + (today.getMonth() + 1)).slice(-2),
-            ('0' + today.getDate()).slice(-2)
-        ].join('-');
-    };
-
-    const minDateValue = disablePast ? getCurrentDate() : null;
+    const minDateValue = disablePast ? (0, _utils.getCurrentDate)() : null;
     return /*#__PURE__*/ _react.default.createElement('input', {
         type: 'date',
         className: 'empty date-selector input',

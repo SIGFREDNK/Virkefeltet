@@ -1,14 +1,14 @@
 import NewTask from './NewTask';
 import Intervals from './Intervals';
 
-import FormLayout from '../../../layouts/form';
+import FormLayout from 'layouts/form';
 import { Form } from '@virkefeltet/ui';
 
 import './styles.css';
 import '../styles.css';
 
 import { useState } from 'react';
-import { task } from '../../../constans/form';
+import { task } from 'constants/form';
 
 const categories = [
     { id: 1, value: 'Hjem' },

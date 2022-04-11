@@ -1,0 +1,9 @@
+{
+    "name": "@virkefeltet/auth",
+    "version": "0.1.0",
+    "main": "index.js",
+    "type": "module",
+    "dependencies": {
+        "jsonwebtoken": "^8.5.1"
+    }
+}

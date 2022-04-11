@@ -1,0 +1,9 @@
+{
+    "name": "@virkefeltet/utils",
+    "type": "module",
+    "version": "0.1.0",
+    "private": true,
+    "main": "index.js",
+    "author": "Sigfred Frey Nørgaard Knudsen",
+    "license": "UNLICENSED"
+}

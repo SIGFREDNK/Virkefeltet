@@ -2,8 +2,8 @@ import { FaAngleLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { Form } from '@virkefeltet/ui';
 
-import Header from '../shared/Header';
-import PageTransition from '../shared/PageTransition';
+import Header from 'layouts/shared/Header';
+import PageTransition from 'layouts/shared/PageTransition';
 
 import './styles.css';
 

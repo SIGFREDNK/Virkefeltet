@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { Form } from '@virkefeltet/ui';
+import * as value5 from '@virkefeltet/utils';
 
 function App() {
     return (

@@ -1,5 +1,6 @@
 {
     "name": "@virkefeltet/strive-frontend",
+    "proxy": "http://127.0.0.1:5001",
     "version": "0.1.0",
     "main": "index.js",
     "private": true,

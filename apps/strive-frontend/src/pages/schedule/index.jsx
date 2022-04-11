@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import useFetch from '../../hooks/useFetch';
+import useFetch from 'hooks/useFetch';
 
 import Task from './Task';
 import Habit from './Habit';
-import Layout from '../../layouts/app';
+import Layout from 'layouts/app';
 
 import './styles.css';
 

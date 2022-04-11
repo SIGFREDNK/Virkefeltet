@@ -2,8 +2,8 @@ import { FaCalendarDay, FaBook, FaTools, FaStar, FaPlus } from 'react-icons/fa';
 
 import './styles.css';
 
-import NavItem from './NavItem/index';
-import Button from '../../../components/Button/index';
+import NavItem from './NavItem';
+import { Button } from '@virkefeltet/ui';
 
 export default function Nav({ page, setPage, toggleMenu }) {
     return (

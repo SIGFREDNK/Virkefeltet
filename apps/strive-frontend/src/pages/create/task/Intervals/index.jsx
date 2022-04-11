@@ -1,6 +1,6 @@
 import { Form } from '@virkefeltet/ui';
 
-import { task } from '../../../../constans/form';
+import { task } from 'constants/form';
 
 export default function Intervals({
     interval,

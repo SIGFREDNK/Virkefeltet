@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaFire, FaPlusCircle } from 'react-icons/fa';
-import Button from '../../../components/Button';
+import { Button } from '@virkefeltet/ui';
 
 import './styles.css';
 

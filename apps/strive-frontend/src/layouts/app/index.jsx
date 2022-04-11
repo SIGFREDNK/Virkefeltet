@@ -1,10 +1,10 @@
 import { FaCog } from 'react-icons/fa';
 import { useState } from 'react';
 
-import Header from '../shared/Header';
+import Header from 'layouts/shared/Header';
 import Menu from './Menu';
 import Nav from './Nav';
-import PageTransition from '../shared/PageTransition';
+import PageTransition from 'layouts/shared/PageTransition';
 
 export default function AppLayout({
     pageName,

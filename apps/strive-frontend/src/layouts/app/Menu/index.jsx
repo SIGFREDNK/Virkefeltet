@@ -1,7 +1,7 @@
 import { FaTools, FaStar, FaInfinity, FaTimes } from 'react-icons/fa';
 import { BiTask } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-import path from '../../../constans/path';
+import path from 'constants/path';
 import { motion } from 'framer-motion';
 
 import './styles.css';

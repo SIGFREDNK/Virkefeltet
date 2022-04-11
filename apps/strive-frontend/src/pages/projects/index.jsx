@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import useFetch from '../../hooks/useFetch';
+import useFetch from 'hooks/useFetch';
 
 import Project from './Project';
-import Layout from '../../layouts/app';
+import Layout from 'layouts/app';
 
 import './styles.css';
 

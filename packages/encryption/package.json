@@ -1,0 +1,6 @@
+{
+    "name": "@virkefeltet/encryption",
+    "main": "index.js",
+    "type": "module",
+    "version": "0.1.0"
+}
