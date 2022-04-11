@@ -1,0 +1,14 @@
+.dropdown::before {
+    content: '';
+    position: absolute;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 0.125rem solid #333;
+    right: 1.1rem;
+    top: 0.75rem;
+    z-index: 2;
+    border-top: 0.125rem solid #ffffff;
+    border-right: 0.125rem solid #ffffff;
+    transform: rotate(-45deg);
+    pointer-events: none;
+}

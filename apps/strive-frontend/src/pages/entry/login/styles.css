@@ -1,0 +1,25 @@
+.login-page .other {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-page .other a {
+    color: #000000;
+    padding: 0.5rem 0;
+}
+
+.login-page .remember-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login-page .remember-me input {
+    height: 1rem;
+    width: 1rem;
+}
+
+.login-page .remember-me span {
+    margin-left: 0.5rem;
+}

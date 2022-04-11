@@ -1,0 +1,20 @@
+.date-selector {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 0 0.8rem;
+    margin: 0;
+}
+
+.date-selector.empty {
+    color: transparent;
+}
+
+.date-selector.empty::before {
+    content: 'Vælg dato';
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight: 300;
+}

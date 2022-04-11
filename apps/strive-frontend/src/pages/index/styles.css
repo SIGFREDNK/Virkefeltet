@@ -1,0 +1,61 @@
+.landing-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #5d86ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-page .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page .logo-wrapper .title {
+    font-size: 4.5rem;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.landing-page .logo-wrapper .subtitle {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: -0.5rem;
+}
+
+.landing-page .actions {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 5rem;
+}
+
+.landing-page .actions .signup {
+    background-color: #edd668;
+}
+
+.landing-page .actions .login {
+    background-color: #f4f2f4;
+}
+
+.landing-page .actions button,
+.landing-page .actions a {
+    width: 80vw;
+    max-width: 25rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.landing-page .actions a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}

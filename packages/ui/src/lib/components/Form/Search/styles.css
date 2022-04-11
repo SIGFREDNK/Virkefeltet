@@ -1,0 +1,13 @@
+.select .close {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: #5d86ff;
+    color: #ffffff;
+    cursor: pointer;
+}

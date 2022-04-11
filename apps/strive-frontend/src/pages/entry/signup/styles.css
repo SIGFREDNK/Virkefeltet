@@ -1,0 +1,68 @@
+.signup-page .phone-number select {
+    width: 4rem;
+}
+
+.signup-page select {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+.signup-page .phone-number input {
+    margin-left: 1rem;
+    width: calc(100% - 5rem);
+}
+
+.signup-page .form-group .address {
+    margin: 0.35rem 0;
+}
+
+.signup-page .form-group .street {
+    display: grid;
+    grid-template-columns: auto 5rem;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+}
+
+.signup-page .form-group .city {
+    display: grid;
+    grid-template-columns: auto 6.5rem;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+}
+
+.signup-page .form-group .country select {
+    width: 100%;
+}
+
+.signup-page .conditions {
+    display: flex;
+    width: 100%;
+    max-width: 30rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.signup-page .conditions div {
+    display: flex;
+    justify-content: center;
+    margin: 0.15rem 0;
+}
+
+.signup-page .conditions span a {
+    color: #000000;
+    margin-left: 0.35rem;
+    text-decoration: underline;
+}
+
+.signup-page .conditions div input {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.signup-page .secondary {
+    margin-bottom: 3rem;
+}

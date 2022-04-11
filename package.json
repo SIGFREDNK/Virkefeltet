@@ -1,17 +1,20 @@
 {
     "name": "@virkefeltet/monorepo",
     "workspaces": [
-        "apps/*"
+        "./apps/*",
+        "./packages/*"
     ],
     "private": true,
-    "version": "1.0.0",
+    "property": "",
+    "version": "0.1.0",
     "description": "Virkefeltet PMV's Monorepo",
     "scripts": {
         "strive": "npm run start -w @virkefeltet/strive-frontend",
         "virkefeltet": "",
-        "prometheus": "",
+        "prometheus": "npm run start -w @virkefeltet/prometheus-frontend",
         "server": "",
         "controlpanel": "",
+        "package": "npm run build -w @virkefeltet/ui",
         "prepare": "husky install"
     },
     "repository": {
@@ -25,9 +28,10 @@
     "author": "Sigfred Frey Nørgaard Knudsen",
     "license": "UNLICENSED",
     "bugs": {
-        "url": "https://github.com/SIGFREDNK/virkefeltet/issues"
+        "url": "https://github.com/SIGFREDNK/virkefeltet/issues",
+        "email": "kontakt@virkefeltet.dk"
     },
-    "homepage": "https://virkefeltet.dk",
+    "homepage": "https://www.virkefeltet.dk",
     "devDependencies": {
         "husky": "^7.0.4",
         "lint-staged": "^12.3.7",

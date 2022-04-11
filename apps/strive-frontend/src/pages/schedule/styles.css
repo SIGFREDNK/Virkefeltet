@@ -1,0 +1,33 @@
+.schedule .tasks .card,
+.schedule .habits .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule .wrapper {
+    margin-bottom: 1rem;
+}
+
+.schedule .wrapper h2 {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+    .schedule .tasks,
+    .schedule .habits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card .left {
+    width: 65%;
+}
+
+.card .right {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
