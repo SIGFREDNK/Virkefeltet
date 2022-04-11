@@ -1,5 +1,5 @@
 {
-    "name": "@sigfred/virkefeltet",
+    "name": "@virkefeltet/monorepo",
     "workspaces": [
         "apps/*"
     ],
