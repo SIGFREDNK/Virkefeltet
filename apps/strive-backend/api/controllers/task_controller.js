@@ -26,4 +26,33 @@ const getMyTasks = async (req, res) => {
     });
 };
 
-export { getAllTasks, getTask, createTask, deleteTask, updateTask, getMyTasks };
+const createMyTask = async (req, res) => {
+    try {
+        const doc = await Task.create({
+            name: req.body.taskName,
+            description: req.body.description,
+            deadline: req.body.date,
+            user: req.user.id
+        });
+
+        res.status(httpCodes.CREATED).json({
+            status: 'success',
+            data: { doc }
+        });
+    } catch (error) {
+        res.status(httpCodes.BAD_REQUEST).json({
+            status: 'failed',
+            message: error
+        });
+    }
+};
+
+export {
+    getAllTasks,
+    getTask,
+    createTask,
+    deleteTask,
+    updateTask,
+    getMyTasks,
+    createMyTask
+};

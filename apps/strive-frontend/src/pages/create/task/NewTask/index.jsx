@@ -15,7 +15,7 @@ export default function NewTask({
                 inputClass="name"
                 placeholder="Navn"
                 value={taskName}
-                onChange={changeData}
+                setValue={changeData}
                 name="taskName"
             />
             <Form.Input
@@ -23,7 +23,7 @@ export default function NewTask({
                 inputClass="description"
                 placeholder="Beskrivelse"
                 value={description}
-                onChange={changeData}
+                setValue={changeData}
                 name="description"
             />
             <Form.Dropdown

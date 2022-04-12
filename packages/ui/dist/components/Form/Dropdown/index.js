@@ -1,135 +1,75 @@
-'use strict';
+"use strict";
 
-Object.defineProperty(exports, '__esModule', {
-    value: true
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 exports.default = Dropdown;
 
-require('core-js/modules/web.dom-collections.iterator.js');
+require("core-js/modules/web.dom-collections.iterator.js");
 
-var _react = _interopRequireWildcard(require('react'));
+var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require('prop-types'));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require('./styles.css');
+require("./styles.css");
 
-require('../styles.css');
+require("../styles.css");
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== 'function') return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function _getRequireWildcardCache(
-        nodeInterop
-    ) {
-        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) {
-        return obj;
-    }
-    if (
-        obj === null ||
-        (typeof obj !== 'object' && typeof obj !== 'function')
-    ) {
-        return { default: obj };
-    }
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) {
-        return cache.get(obj);
-    }
-    var newObj = {};
-    var hasPropertyDescriptor =
-        Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for (var key in obj) {
-        if (
-            key !== 'default' &&
-            Object.prototype.hasOwnProperty.call(obj, key)
-        ) {
-            var desc = hasPropertyDescriptor
-                ? Object.getOwnPropertyDescriptor(obj, key)
-                : null;
-            if (desc && (desc.get || desc.set)) {
-                Object.defineProperty(newObj, key, desc);
-            } else {
-                newObj[key] = obj[key];
-            }
-        }
-    }
-    newObj.default = obj;
-    if (cache) {
-        cache.set(obj, newObj);
-    }
-    return newObj;
-}
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Dropdown(_ref) {
-    let { width, options, value, setValue, name } = _ref;
-    const [isOpen, open] = (0, _react.useState)(false);
-    (0, _react.useEffect)(() => {
-        const close = event => {
-            if (!event.target.classList.contains('dropdown-component'))
-                open(false);
-            document.removeEventListener('mousedown', close);
-        };
+  let {
+    width,
+    options,
+    value,
+    setValue,
+    name
+  } = _ref;
+  const [isOpen, open] = (0, _react.useState)(false);
+  (0, _react.useEffect)(() => {
+    const close = event => {
+      if (!event.target.classList.contains('dropdown-component')) open(false);
+      document.removeEventListener('mousedown', close);
+    };
 
-        if (isOpen) document.addEventListener('mousedown', close);
-    }, [isOpen, open]);
-    return /*#__PURE__*/ _react.default.createElement(
-        'div',
-        {
-            className: 'select dropdown dropdown-component',
-            onClick: () => open(isOpen ? false : true),
-            style: {
-                width: width
-            }
-        },
-        /*#__PURE__*/ _react.default.createElement('input', {
-            type: 'text',
-            className: 'dropdown-component selector input',
-            value: value,
-            onChange: event => setValue(name, event.target.value)
-        }),
-        isOpen &&
-            /*#__PURE__*/ _react.default.createElement(
-                'div',
-                {
-                    className: 'options dropdown-component',
-                    style: {
-                        width: width
-                    }
-                },
-                options.map((option, key) =>
-                    /*#__PURE__*/ _react.default.createElement(
-                        'div',
-                        {
-                            key: key,
-                            className: 'option dropdown-component',
-                            onClick: () => setValue(name, option.value),
-                            style: {
-                                width: width,
-                                display:
-                                    option.value === value ? 'none' : 'flex'
-                            }
-                        },
-                        option.value
-                    )
-                )
-            )
-    );
+    if (isOpen) document.addEventListener('mousedown', close);
+  }, [isOpen, open]);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "select dropdown dropdown-component",
+    onClick: () => open(isOpen ? false : true),
+    style: {
+      width: width
+    }
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    className: "dropdown-component selector input",
+    value: value,
+    onChange: event => setValue(name, event.target.value)
+  }), isOpen && /*#__PURE__*/_react.default.createElement("div", {
+    className: "options dropdown-component",
+    style: {
+      width: width
+    }
+  }, options.map((option, key) => /*#__PURE__*/_react.default.createElement("div", {
+    key: key,
+    className: "option dropdown-component",
+    onClick: () => setValue(name, option.value),
+    style: {
+      width: width,
+      display: option.value === value ? 'none' : 'flex'
+    }
+  }, option.value))));
 }
 
 Dropdown.defaultProps = {
-    width: '100%',
-    height: '2.5rem'
+  width: '100%',
+  height: '2.5rem'
 };
 Dropdown.propTypes = {
-    value: _propTypes.default.string,
-    options: _propTypes.default.array
+  value: _propTypes.default.string,
+  options: _propTypes.default.array
 };

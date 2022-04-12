@@ -2,7 +2,14 @@ import React from 'react';
 
 import './styles.css';
 
-export default function Input({ type, inputClass, placeholder, name }) {
+export default function Input({
+    type,
+    inputClass,
+    placeholder,
+    name,
+    value,
+    setValue
+}) {
     return (
         <div className="form-group">
             <input
@@ -10,6 +17,8 @@ export default function Input({ type, inputClass, placeholder, name }) {
                 className={`input ${inputClass}`}
                 placeholder={placeholder}
                 name={name}
+                value={value}
+                onChange={event => setValue(name, event.target.value)}
             />
         </div>
     );

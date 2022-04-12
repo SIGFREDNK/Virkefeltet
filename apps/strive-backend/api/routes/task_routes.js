@@ -6,7 +6,10 @@ import * as taskController from '../controllers/task_controller.js';
 const router = Router();
 
 // ROUTES
-router.route('/me').get(taskController.getMyTasks);
+router
+    .route('/me')
+    .get(taskController.getMyTasks)
+    .post(taskController.createMyTask);
 
 router
     .route('/')

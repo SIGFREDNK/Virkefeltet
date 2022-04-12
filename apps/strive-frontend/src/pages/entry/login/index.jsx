@@ -16,7 +16,7 @@ export default function Login({ setUser }) {
 
         const userCredentials = { email, password };
 
-        const response = await fetch('http://localhost:4001/api/auth/login', {
+        const response = await fetch('http://localhost:4002/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

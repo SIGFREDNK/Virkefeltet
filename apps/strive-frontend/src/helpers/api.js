@@ -1,19 +1,13 @@
 const post = async (url, body) => {
-    return await fetch(url, {
+    const response = await fetch(url, {
         method: 'POST',
         credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body
-    })
-        .then(response => {
-            response.json();
-        })
-        .then(data => {
-            return data;
-        })
-        .catch(error => {
-            console.log(error);
-        });
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+    return response.json();
 };
 
 const api = { post };

@@ -1,14 +1,15 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import NewTask from './NewTask';
 import Intervals from './Intervals';
-
 import FormLayout from 'layouts/form';
 import { Form } from '@virkefeltet/ui';
+import { task } from 'constants/form';
+import api from 'helpers/api';
 
 import './styles.css';
 import '../styles.css';
-
-import { useState } from 'react';
-import { task } from 'constants/form';
 
 const categories = [
     { id: 1, value: 'Hjem' },
@@ -22,6 +23,7 @@ const tasks = [
 
 export default function CreateTask({ formType }) {
     const [data, setData] = useState(task.DEFAULT_VALUES);
+    const navigate = useNavigate();
 
     const changeData = (name, value) => {
         setData(prevData => {
@@ -29,7 +31,11 @@ export default function CreateTask({ formType }) {
         });
     };
 
-    const handleSubmit = () => {};
+    const handleSubmit = async event => {
+        event.preventDefault();
+        const result = await api.post('/api/tasks/me', data);
+        if (result.status === 'success') navigate(-1);
+    };
 
     return (
         <FormLayout
@@ -80,8 +86,8 @@ export default function CreateTask({ formType }) {
                 />
             )}
             {data.time === 'Dato' && (
-                <Form.DateSelector
-                    listener={changeData}
+                <Form.DatePicker
+                    setValue={changeData}
                     value={data.date}
                     disablePast={true}
                     name="date"

@@ -3,7 +3,7 @@ import { getCurrentDate } from '@virkefeltet/utils';
 
 import './styles.css';
 
-export default function DateSelector({ listener, value, disablePast }) {
+export default function DatePicker({ setValue, value, disablePast, name }) {
     const initiate = event => {
         event.target.classList.remove('empty');
     };
@@ -16,7 +16,7 @@ export default function DateSelector({ listener, value, disablePast }) {
             className="empty date-selector input"
             onClick={event => initiate(event)}
             value={value}
-            onChange={listener}
+            onChange={event => setValue(name, event.target.value)}
             min={minDateValue}
         ></input>
     );
