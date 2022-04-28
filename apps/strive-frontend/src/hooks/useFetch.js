@@ -5,12 +5,14 @@ export default function useFetch(url, options) {
     const [pending, setPending] = useState(true);
     const [error, setError] = useState(null);
 
-    if (!options) options = { method: 'GET', credentials: 'include' };
-
     useEffect(() => {
         const abortController = new AbortController();
 
-        fetch(url, { ...options, signal: abortController.signal })
+        fetch(url, {
+            method: 'GET',
+            credentials: 'include',
+            signal: abortController.signal
+        })
             .then(response => {
                 if (response.status.toString().startsWith('5')) {
                     throw Error('Vi kunne desværre ikke hente dine data');
@@ -31,7 +33,7 @@ export default function useFetch(url, options) {
             });
 
         return () => abortController.abort();
-    }, [url, options]);
+    }, [url]);
 
     return { data, pending, error };
 }

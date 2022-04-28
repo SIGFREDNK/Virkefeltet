@@ -1,18 +1,29 @@
+.progress {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
 .project {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    position: relative;
+    cursor: pointer;
+    color: #000000;
 }
 
-.project .left {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 1;
+.project .card-layout {
+    padding-bottom: 1.4rem;
 }
 
-.project .right {
-    width: 100%;
-    grid-column: 2;
-    grid-row: 1;
+.project .small {
+    position: absolute;
+    bottom: 0.6rem;
+}
+
+.project .date {
+    right: 1.5rem;
+}
+
+.project .category {
+    left: 1.5rem;
 }

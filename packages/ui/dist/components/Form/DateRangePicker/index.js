@@ -36,14 +36,14 @@ function DateRangePicker(_ref) {
 
   const minDateValue = disablePast ? (0, _utils.getCurrentDate)() : null;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("input", {
-    type: "date",
+    type: "datetime-local",
     className: "date-range empty input start-date",
     min: minDateValue,
     onClick: initiate,
     onChange: event => update(event),
     value: startDateValue
   }), /*#__PURE__*/_react.default.createElement("input", {
-    type: "date",
+    type: "datetime-local",
     className: "date-range empty input end-date",
     min: minDateValue,
     onClick: initiate,

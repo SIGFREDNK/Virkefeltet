@@ -12,7 +12,7 @@ export default function DatePicker({ setValue, value, disablePast, name }) {
 
     return (
         <input
-            type="date"
+            type="datetime-local"
             className="empty date-selector input"
             onClick={event => initiate(event)}
             value={value}

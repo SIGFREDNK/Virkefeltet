@@ -1,6 +1,7 @@
 .entry-page {
     background-color: #f9f9f9;
     height: 100vh;
+    width: 100%;
 }
 
 .entry-page .entry-form {
@@ -68,6 +69,10 @@
     padding-left: 0.5rem;
     border: none;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.entry-page input[type='checkbox'] {
+    box-shadow: none;
 }
 
 .entry-page input[type='submit'] {

@@ -13,6 +13,20 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background-color: #fbfbfb;
+    overflow-x: hidden;
+    padding-bottom: 7rem;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
 }
 
 a {
@@ -31,4 +45,61 @@ ul {
 
 input[type='submit'] {
     border: none;
+}
+
+@media screen and (max-width: 759px) {
+    nav a:nth-child(3),
+    nav a:nth-child(4),
+    nav a:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    body {
+        padding-bottom: 0;
+    }
+    .app {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .app .wrapper {
+        width: 100%;
+    }
+    .app .page {
+        margin-left: 6.5rem;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 5rem;
+        height: 100%;
+    }
+    nav > * {
+        margin: 1rem 0;
+    }
+    nav a {
+        display: flex;
+    }
+    nav a:nth-child(1) {
+        display: none;
+    }
+    header .left {
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card .right {
+        display: none;
+    }
+    .card .left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .header .header-title {
+        display: none;
+    }
 }

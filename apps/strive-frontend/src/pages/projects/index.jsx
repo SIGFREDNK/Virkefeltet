@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
 import useFetch from 'hooks/useFetch';
+import { useEffect } from 'react';
 
 import Project from './Project';
 import Layout from 'layouts/app';
 
 import './styles.css';
 
-export default function Projects({ pageNumber, setPageNumber, user }) {
+export default function Projects({ pageNumber, setPageNumber }) {
     useEffect(() => {
-        setPageNumber(2);
+        setPageNumber(3);
     }, [setPageNumber]);
 
     const { data: projects, pending, error } = useFetch('/api/projects/me');
@@ -18,7 +18,6 @@ export default function Projects({ pageNumber, setPageNumber, user }) {
             pageName={'Projekter'}
             pageClass={'projects'}
             pageNumber={pageNumber}
-            setPageNumber={setPageNumber}
         >
             <div className="project-wrapper responsive-grid">
                 {error && <div>{error}</div>}
@@ -28,7 +27,7 @@ export default function Projects({ pageNumber, setPageNumber, user }) {
                         <Project
                             key={project.id}
                             name={project.name}
-                            progress={1}
+                            link={`/projects/${project._id}`}
                         />
                     ))}
             </div>

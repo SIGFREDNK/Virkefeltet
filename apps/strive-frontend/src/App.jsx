@@ -3,10 +3,13 @@ import { useState } from 'react';
 import path from './constants/path';
 import { AnimatePresence } from 'framer-motion';
 
+import Overview from 'pages/overview';
 import Schedule from './pages/schedule';
+import Project from './pages/projects/id';
 import Projects from './pages/projects';
 import Skills from './pages/skills';
 import Diary from './pages/diary';
+import Social from 'pages/social';
 import LandingPage from './pages/index/index';
 import Login from './pages/entry/login';
 import Signup from './pages/entry/signup';
@@ -19,11 +22,6 @@ import './App.css';
 
 export default function App() {
     const [page, changePage] = useState(1);
-    const [user, setUser] = useState(null);
-
-    function setPage(page) {
-        changePage(page);
-    }
 
     const location = useLocation();
 
@@ -32,34 +30,42 @@ export default function App() {
             <AnimatePresence exitBeforeEnter initial={false}>
                 <Routes location={location} key={location.pathname}>
                     <Route index element={<LandingPage />} />
+                    <Route path={path.LOGIN} element={<Login />} />
+                    <Route path={path.SIGNUP} element={<Signup />} />
                     <Route
-                        path={path.LOGIN}
+                        path={path.OVERVIEW}
                         element={
-                            <Login
-                                setUser={userData => {
-                                    setUser(userData);
-                                }}
+                            <Overview
+                                pageNumber={page}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
                             />
                         }
                     />
-                    <Route path={path.SIGNUP} element={<Signup />} />
                     <Route
                         path={path.SCHEDULE}
                         element={
                             <Schedule
                                 pageNumber={page}
-                                setPageNumber={setPage}
-                                user={user}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
                             />
                         }
+                    />
+                    <Route
+                        path={`${path.PROJECTS}/:id`}
+                        element={<Project />}
                     />
                     <Route
                         path={path.PROJECTS}
                         element={
                             <Projects
                                 pageNumber={page}
-                                setPageNumber={setPage}
-                                user={user}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
                             />
                         }
                     />
@@ -68,8 +74,9 @@ export default function App() {
                         element={
                             <Skills
                                 pageNumber={page}
-                                setPageNumber={setPage}
-                                user={user}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
                             />
                         }
                     />
@@ -78,8 +85,20 @@ export default function App() {
                         element={
                             <Diary
                                 pageNumber={page}
-                                setPageNumber={setPage}
-                                user={user}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
+                            />
+                        }
+                    />
+                    <Route
+                        path={path.SOCIAL}
+                        element={
+                            <Social
+                                pageNumber={page}
+                                setPageNumber={pageNumber =>
+                                    changePage(pageNumber)
+                                }
                             />
                         }
                     />

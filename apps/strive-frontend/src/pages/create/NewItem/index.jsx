@@ -2,7 +2,7 @@ import './styles.css';
 import { Form } from '@virkefeltet/ui';
 
 export default function NewTask({
-    taskName,
+    name,
     description,
     category,
     categories,
@@ -14,9 +14,9 @@ export default function NewTask({
                 type="text"
                 inputClass="name"
                 placeholder="Navn"
-                value={taskName}
+                value={name}
                 setValue={changeData}
-                name="taskName"
+                name="name"
             />
             <Form.Input
                 type="text"

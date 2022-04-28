@@ -6,7 +6,12 @@ import * as habitController from '../controllers/habit_controller.js';
 const router = Router();
 
 // ROUTES
-router.route('/me').get(habitController.getMyHabits);
+router.route('/me/streak-and-count/:id').get(habitController.getStreakAndCount);
+
+router
+    .route('/me')
+    .get(habitController.getMyHabits)
+    .post(habitController.createMyHabit);
 
 router
     .route('/')

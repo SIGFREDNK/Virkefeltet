@@ -1,0 +1,98 @@
+.project-page .category .add-step {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    color: #808080;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.project-page .category .add-step::before {
+    content: '';
+    border: 1px solid;
+    height: 12px;
+    position: absolute;
+    left: 5px;
+}
+
+.project-page .category .add-step::after {
+    content: '';
+    border: 1px solid;
+    width: 12px;
+    position: absolute;
+    left: 0;
+}
+
+.project-page .category .new-step-input {
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.project-page .category .new-step-input input,
+.project-page .category .new-step-input .textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.project-page .category .new-step-input input::placeholder,
+.project-page .category .new-step-input .textarea::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    color: #c7c7c7;
+}
+
+.project-page .category .new-step-input .textarea::placeholder {
+    font-weight: 300;
+}
+
+.project-page .category .new-step-input .textarea {
+    writing-mode: horizontal-tb;
+    overflow-wrap: break-word;
+    text-rendering: auto;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    resize: none;
+    min-height: 1.25rem;
+    white-space: pre-wrap;
+    margin-top: 0.25rem;
+}
+
+.project-page .category .new-step-input .toolbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.project-page .category .new-step-input .toolbar .flag {
+    color: orangered;
+}
+
+.project-page .category .new-step-input .toolbar svg:first-child {
+    margin-right: 0.75rem;
+}
+
+.project-page .category form .form-actions {
+    margin-top: 1rem;
+}
+
+.project-page .category form .form-actions button,
+.project-page .category form .form-actions input[type='submit'] {
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.project-page .category form .form-actions .add-new-step {
+    background-color: #5d86ff;
+    color: #ffffff;
+}
+
+.project-page .category form .form-actions .cancel-step {
+    margin-left: 1rem;
+    background-color: #ea4e1b;
+    color: #ffffff;
+}

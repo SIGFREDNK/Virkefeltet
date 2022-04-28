@@ -29,7 +29,7 @@ export default function DateRangePicker({
     return (
         <>
             <input
-                type="date"
+                type="datetime-local"
                 className="date-range empty input start-date"
                 min={minDateValue}
                 onClick={initiate}
@@ -37,7 +37,7 @@ export default function DateRangePicker({
                 value={startDateValue}
             />
             <input
-                type="date"
+                type="datetime-local"
                 className="date-range empty input end-date"
                 min={minDateValue}
                 onClick={initiate}

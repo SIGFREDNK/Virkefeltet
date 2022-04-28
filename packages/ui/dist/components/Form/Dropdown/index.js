@@ -27,7 +27,8 @@ function Dropdown(_ref) {
     options,
     value,
     setValue,
-    name
+    name,
+    required
   } = _ref;
   const [isOpen, open] = (0, _react.useState)(false);
   (0, _react.useEffect)(() => {
@@ -48,7 +49,9 @@ function Dropdown(_ref) {
     type: "text",
     className: "dropdown-component selector input",
     value: value,
-    onChange: event => setValue(name, event.target.value)
+    onChange: event => setValue(name, event.target.value),
+    readOnly: true,
+    required: required
   }), isOpen && /*#__PURE__*/_react.default.createElement("div", {
     className: "options dropdown-component",
     style: {
@@ -67,7 +70,8 @@ function Dropdown(_ref) {
 
 Dropdown.defaultProps = {
   width: '100%',
-  height: '2.5rem'
+  height: '2.5rem',
+  required: false
 };
 Dropdown.propTypes = {
   value: _propTypes.default.string,

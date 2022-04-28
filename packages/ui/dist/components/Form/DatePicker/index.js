@@ -27,7 +27,7 @@ function DatePicker(_ref) {
 
   const minDateValue = disablePast ? (0, _utils.getCurrentDate)() : null;
   return /*#__PURE__*/_react.default.createElement("input", {
-    type: "date",
+    type: "datetime-local",
     className: "empty date-selector input",
     onClick: event => initiate(event),
     value: value,

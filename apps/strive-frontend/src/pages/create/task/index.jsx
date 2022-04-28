@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import NewTask from './NewTask';
+import NewItem from '../NewItem';
 import Intervals from './Intervals';
 import FormLayout from 'layouts/form';
 import { Form } from '@virkefeltet/ui';
@@ -34,7 +34,8 @@ export default function CreateTask({ formType }) {
     const handleSubmit = async event => {
         event.preventDefault();
         const result = await api.post('/api/tasks/me', data);
-        if (result.status === 'success') navigate(-1);
+        if (result.status === 'success') return navigate(-1);
+        console.log(result.message);
     };
 
     return (
@@ -51,6 +52,7 @@ export default function CreateTask({ formType }) {
                 setValue={changeData}
                 value={data.type}
                 name="type"
+                required={true}
             />
             {data.type === 'Brug eksisterende' && (
                 <Form.Search
@@ -62,8 +64,8 @@ export default function CreateTask({ formType }) {
                 />
             )}
             {data.type === 'Opret ny' && (
-                <NewTask
-                    taskName={data.taskName}
+                <NewItem
+                    name={data.name}
                     description={data.description}
                     category={data.category}
                     categories={categories}
@@ -75,13 +77,14 @@ export default function CreateTask({ formType }) {
                 setValue={changeData}
                 value={data.time}
                 name="time"
+                required={true}
             />
             {data.time === 'Interval' && (
                 <Intervals
                     interval={data.interval}
                     weekday={data.weekday}
                     monthDay={data.monthDay}
-                    month={data.month}
+                    yearlyDate={data.yearlyDate}
                     changeData={changeData}
                 />
             )}
@@ -93,7 +96,7 @@ export default function CreateTask({ formType }) {
                     name="date"
                 />
             )}
-            {(data.time === 'Dato' || data.time === 'Interval') && (
+            {data.time === 'Interval' && data.interval !== 'Årligt' && (
                 <Form.Clock
                     name="timeStamp"
                     setValue={changeData}

@@ -1,46 +1,59 @@
-import { FaCalendarDay, FaBook, FaTools, FaStar, FaPlus } from 'react-icons/fa';
+import {
+    FaCalendarDay,
+    FaBook,
+    FaTools,
+    FaStar,
+    FaShareAlt
+} from 'react-icons/fa';
+import { CgMenuGridR } from 'react-icons/cg';
 
 import './styles.css';
 
 import NavItem from './NavItem';
-import { Button } from '@virkefeltet/ui';
 
-export default function Nav({ page, setPage, toggleMenu }) {
+export default function Nav({ page }) {
     return (
         <nav>
             <NavItem
+                name="Oversigt"
+                icon={
+                    <CgMenuGridR
+                        style={{ width: '1.8rem', height: '1.8rem' }}
+                    />
+                }
+                selected={page === 1}
+                path="/overview"
+            />
+            <NavItem
                 name="Dagsplan"
                 icon={<FaCalendarDay />}
-                selected={page === 1}
+                selected={page === 2}
                 path="/schedule"
                 notify={true}
-                page={1}
-                changePage={setPage}
             />
             <NavItem
                 name="Projekter"
                 icon={<FaTools />}
-                selected={page === 2}
+                selected={page === 3}
                 path="/projects"
-                page={2}
-                changePage={setPage}
             />
-            <Button value={<FaPlus />} onclick={toggleMenu} />
             <NavItem
                 name="Evner"
                 icon={<FaStar />}
-                selected={page === 3}
+                selected={page === 4}
                 path="/skills"
-                page={3}
-                changePage={setPage}
             />
             <NavItem
                 name="Dagbog"
                 icon={<FaBook />}
-                selected={page === 4}
+                selected={page === 5}
                 path="/diary"
-                page={4}
-                changePage={setPage}
+            />
+            <NavItem
+                name="Social"
+                icon={<FaShareAlt />}
+                selected={page === 6}
+                path="/social"
             />
         </nav>
     );

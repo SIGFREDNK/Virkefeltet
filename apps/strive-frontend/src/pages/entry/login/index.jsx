@@ -31,13 +31,21 @@ export default function Login({ setUser }) {
         if (data.status === 'failed')
             return (errorMessage.innerHTML = data.message);
 
-        setUser(data.data.user);
         navigate('/schedule');
+    };
+
+    const submitOnEnter = event => {
+        if (event.key === 'Enter') login();
     };
 
     return (
         <div className="login-page entry-page">
-            <form className="entry-form" onSubmit={login}>
+            <form
+                action="#"
+                method="POST"
+                className="entry-form"
+                onSubmit={login}
+            >
                 <Link className="back" to="/">
                     <FaArrowLeft />
                     <span>Tilbage</span>
@@ -56,6 +64,7 @@ export default function Login({ setUser }) {
                             name="email"
                             className="email"
                             onChange={event => setEmail(event.target.value)}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -66,6 +75,7 @@ export default function Login({ setUser }) {
                             name="password"
                             className="password"
                             onChange={event => setPassword(event.target.value)}
+                            required
                         />
                         {visible && (
                             <FaEye
@@ -81,16 +91,20 @@ export default function Login({ setUser }) {
                         )}
                         <div className="other">
                             <div className="remember-me">
-                                <input type="checkbox" />
+                                <input type="checkbox" name="remember" />
                                 <span>Husk Mig</span>
                             </div>
                             <Link to="/forgotten">Glemt Kodeord?</Link>
                         </div>
                     </div>
-                    <input type="submit" value="Login" />
+                    <input
+                        type="submit"
+                        value="Log ind"
+                        onKeyDown={event => submitOnEnter(event)}
+                    />
                     <span className="or">Har du ikke allerede en bruger?</span>
                     <Link to="/signup" className="secondary">
-                        Opret Bruger
+                        Opret bruger
                     </Link>
                     <Link className="terms-conditions" to="/terms-conditions">
                         Vilkår og betingelser

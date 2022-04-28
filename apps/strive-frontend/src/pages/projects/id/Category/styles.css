@@ -1,0 +1,53 @@
+.project-page .category {
+    flex: 0 0 20rem;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 6rem);
+}
+
+.project-page .category .step {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 0.4rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.025);
+    display: flex;
+    width: 100%;
+}
+
+.project-page .category .step .step-text {
+    width: 70%;
+}
+
+.project-page .category .step .step-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.project-page .category .step .step-actions .add {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #34b233;
+    cursor: pointer;
+}
+
+.project-page .category .step .step-actions .remove {
+    width: 1.85rem;
+    height: 1.85rem;
+    color: #f00e0e;
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+
+.project-page .category .step h4 {
+    font-weight: 500;
+}
+
+.project-page .category .step p {
+    font-size: 0.8rem;
+    font-weight: 300;
+}

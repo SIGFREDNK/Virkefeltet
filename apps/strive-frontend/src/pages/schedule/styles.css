@@ -10,24 +10,78 @@
     margin-bottom: 1rem;
 }
 
-.schedule .wrapper h2 {
+.schedule .wrapper .subtitle {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 880px) {
     .schedule .tasks,
     .schedule .habits {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.card .left {
-    width: 65%;
+.habit .category,
+.task .category {
+    color: blue;
+    left: 1.5rem;
 }
 
-.card .right {
-    width: 35%;
+.task .date,
+.habit .interval {
+    right: 1.5rem;
+    color: green;
+}
+
+.toolbar {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.subpage {
+    background-color: #ebf7fc;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 1rem;
+}
+
+.toolbar .subpage button {
+    width: 3rem;
+    height: 2.5rem;
+    transition: background-color 300ms ease-in-out;
+}
+
+.toolbar .subpage button:nth-child(1) {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.toolbar .subpage button:nth-child(2) {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.toolbar .subpage button.selected {
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+.toolbar .subpage button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.toolbar .filter,
+.toolbar .social {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #ebf7fc;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 0.3rem;
+}
+
+.toolbar .filter svg,
+.toolbar .social svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #000;
 }

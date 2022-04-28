@@ -1,3 +1,24 @@
-.task svg:first-child {
+.task {
+    position: relative;
+}
+
+.task .card-layout {
+    margin-bottom: 1.4rem;
+}
+
+.task .right:hover {
+    cursor: pointer;
+}
+
+.task svg:last-child {
+    color: #c3c4c3;
+}
+
+.task svg:last-child:hover {
     color: #34b233;
+}
+
+.task .small {
+    position: absolute;
+    bottom: 0.6rem;
 }

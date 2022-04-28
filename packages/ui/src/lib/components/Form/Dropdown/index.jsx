@@ -5,7 +5,14 @@ import PropTypes from 'prop-types';
 import './styles.css';
 import '../styles.css';
 
-export default function Dropdown({ width, options, value, setValue, name }) {
+export default function Dropdown({
+    width,
+    options,
+    value,
+    setValue,
+    name,
+    required
+}) {
     const [isOpen, open] = useState(false);
 
     useEffect(() => {
@@ -29,6 +36,8 @@ export default function Dropdown({ width, options, value, setValue, name }) {
                 className="dropdown-component selector input"
                 value={value}
                 onChange={event => setValue(name, event.target.value)}
+                readOnly
+                required={required}
             />
             {isOpen && (
                 <div
@@ -57,7 +66,8 @@ export default function Dropdown({ width, options, value, setValue, name }) {
 
 Dropdown.defaultProps = {
     width: '100%',
-    height: '2.5rem'
+    height: '2.5rem',
+    required: false
 };
 
 Dropdown.propTypes = {

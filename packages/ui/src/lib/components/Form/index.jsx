@@ -7,6 +7,7 @@ import DateRangePicker from './DateRangePicker';
 import Clock from './Clock';
 import Input from './Input';
 import Search from './Search';
+import Switch from './Switch';
 
 Form.Dropdown = Dropdown;
 Form.DatePicker = DatePicker;
@@ -14,6 +15,7 @@ Form.DateRangePicker = DateRangePicker;
 Form.Clock = Clock;
 Form.Input = Input;
 Form.Search = Search;
+Form.Switch = Switch;
 
 function Form({ action, submit, children, formClass }) {
     return (

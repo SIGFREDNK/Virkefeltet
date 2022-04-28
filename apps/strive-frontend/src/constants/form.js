@@ -1,14 +1,14 @@
 export const task = {
     DEFAULT_VALUES: {
         type: 'Opret ny',
-        time: 'Vælg tidspunkt',
+        time: 'Vælg tidsramme',
         interval: 'Vælg interval',
         weekday: 'Vælg ugedag',
-        month: 'Vælg måned',
+        yearlyDate: 'Vælg måned',
         monthDay: 'Vælg dag',
         date: '',
         task: '',
-        taskName: '',
+        name: '',
         description: '',
         category: 'Vælg kategori',
         timeStamp: '',
@@ -86,5 +86,28 @@ export const task = {
         { id: 11, value: 'Oktober' },
         { id: 12, value: 'November' },
         { id: 13, value: 'December' }
+    ]
+};
+
+export const habit = {
+    DEFAULT_VALUES: {
+        type: 'Opret ny',
+        habit: '',
+        name: '',
+        description: '',
+        category: 'Vælg kategori',
+        active: false,
+        interval: 'Vælg tidspunkt',
+        numberOfTimes: ''
+    },
+    DAY_PICKER: [
+        { id: 1, value: 'Hver dag' },
+        { id: 2, value: 'Hver mandag' },
+        { id: 3, value: 'Hver tirsdag' },
+        { id: 4, value: 'Hver onsdag' },
+        { id: 5, value: 'Hver torsdag' },
+        { id: 6, value: 'Hver fredag' },
+        { id: 7, value: 'Hver lørdag' },
+        { id: 8, value: 'Hver søndag' }
     ]
 };

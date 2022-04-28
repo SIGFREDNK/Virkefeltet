@@ -21,6 +21,8 @@ var _Input = _interopRequireDefault(require("./Input"));
 
 var _Search = _interopRequireDefault(require("./Search"));
 
+var _Switch = _interopRequireDefault(require("./Switch"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 Form.Dropdown = _Dropdown.default;
@@ -29,6 +31,7 @@ Form.DateRangePicker = _DateRangePicker.default;
 Form.Clock = _Clock.default;
 Form.Input = _Input.default;
 Form.Search = _Search.default;
+Form.Switch = _Switch.default;
 
 function Form(_ref) {
   let {

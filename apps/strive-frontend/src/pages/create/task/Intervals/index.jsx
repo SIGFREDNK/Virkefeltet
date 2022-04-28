@@ -25,7 +25,7 @@ export default function Intervals({
                     name="weekday"
                 />
             )}
-            {(interval === 'Månedligt' || interval === 'Årligt') && (
+            {interval === 'Månedligt' && (
                 <Form.Dropdown
                     options={task.MONTH_DAYS}
                     setValue={changeData}
@@ -34,11 +34,11 @@ export default function Intervals({
                 />
             )}
             {interval === 'Årligt' && (
-                <Form.Dropdown
-                    options={task.MONTHS}
+                <Form.DatePicker
                     setValue={changeData}
-                    value={month}
-                    name="month"
+                    value={changeData}
+                    disablePast={true}
+                    name="yearlyDate"
                 />
             )}
         </>
